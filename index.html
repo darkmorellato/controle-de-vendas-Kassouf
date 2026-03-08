@@ -830,10 +830,10 @@
                         <h3 className="font-black text-4xl mb-2 text-white font-display tracking-tight">Atenção</h3>
                         <p className="text-xl font-bold text-odoo-500 mb-4">{userName}</p>
                         <p className="text-slate-400 mb-2 font-medium text-lg">Não esqueça de completar suas tarefas diárias</p>
-                        <div className="bg-odoo-900/40 py-2 px-6 rounded-full inline-block mb-6 border border-odoo-500/20 backdrop-blur-sm"><p className="font-black text-odoo-400 uppercase tracking-widest text-xs">{phase}</p></div>
+                        <div className="py-2 px-6 rounded-full inline-block mb-6 border border-white/30" style={{ background:'#f5f0ea' }}><p className="font-black uppercase tracking-widest text-xs" style={{ color:'#7a6a5a' }}>{phase}</p></div>
                         <p className="text-slate-500 mb-10 font-medium">Existe Pendências para Finaliza-las!</p>
                         <div className="flex flex-col gap-4">
-                            <button onClick={onGoToCalendar} className="w-full btn-gold p-4 rounded-[2rem] shadow-vision flex items-center justify-center gap-2"><Icons.Calendar className="w-5 h-5" /> Verificar Calendário</button>
+                            <button onClick={onGoToCalendar} className="w-full p-4 rounded-[2rem] flex items-center justify-center gap-2 font-bold text-white transition-all duration-200" style={{ background:'linear-gradient(110deg,#3aaad9,#5cb8ed,#82cef4)', boxShadow:'0 4px 18px rgba(92,184,237,0.45)', border:'1.5px solid rgba(255,255,255,0.6)' }} onMouseEnter={e=>{ e.currentTarget.style.boxShadow='0 6px 28px rgba(92,184,237,0.65)'; e.currentTarget.style.transform='translateY(-2px)'; }} onMouseLeave={e=>{ e.currentTarget.style.boxShadow='0 4px 18px rgba(92,184,237,0.45)'; e.currentTarget.style.transform='translateY(0)'; }} onMouseDown={e=>e.currentTarget.style.transform='scale(0.97)'} onMouseUp={e=>e.currentTarget.style.transform='translateY(-2px)'}><Icons.Calendar className="w-5 h-5" /> Verificar Calendário</button>
                             <button onClick={onClose} className="w-full p-4 text-slate-500 hover:text-white rounded-[2rem] font-bold transition-colors active-scale uppercase tracking-wide text-xs">Ver depois (fecha alerta)</button>
                         </div>
                     </div>
