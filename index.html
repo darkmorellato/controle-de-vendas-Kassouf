@@ -669,6 +669,15 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
+<script>
+    (function () {
+        const INACTIVE_MS = 15 * 60 * 1000; // 15 minutos
+        let timer = setTimeout(() => location.reload(), INACTIVE_MS);
+        const reset = () => { clearTimeout(timer); timer = setTimeout(() => location.reload(), INACTIVE_MS); };
+        ['mousemove','mousedown','keydown','scroll','touchstart','click'].forEach(e => document.addEventListener(e, reset, { passive: true }));
+    })();
+</script>
+
 <body class="antialiased selection:bg-gold-400 selection:text-black">
     <div id="root"></div>
 
